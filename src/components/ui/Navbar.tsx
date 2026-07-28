@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiX } from "react-icons/fi";
+import { FiSearch, FiUser, FiShoppingBag, FiHeart, FiMenu, FiX } from "react-icons/fi";
+import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
 
 const NAV_LINKS = [
   { label: "Home", href: "#" },
@@ -14,6 +16,8 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { openCart, itemCount } = useCart();
+  const { openWishlist, itemCount: wishlistCount } = useWishlist();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -62,11 +66,31 @@ export default function Navbar() {
           <button className="text-white/70 hover:text-white transition-colors hidden sm:block" aria-label="Account">
             <FiUser className="w-5 h-5" strokeWidth={1.5} />
           </button>
-          <button className="text-white/70 hover:text-white transition-colors relative" aria-label="Cart">
+          {/* Wishlist */}
+          <button
+            onClick={openWishlist}
+            className="text-white/70 hover:text-red transition-colors relative"
+            aria-label="Wishlist"
+          >
+            <FiHeart className="w-5 h-5" strokeWidth={1.5} />
+            {wishlistCount > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-red text-[9px] font-medium flex items-center justify-center text-white">
+                {wishlistCount}
+              </span>
+            )}
+          </button>
+          {/* Cart */}
+          <button
+            onClick={openCart}
+            className="text-white/70 hover:text-white transition-colors relative"
+            aria-label="Cart"
+          >
             <FiShoppingBag className="w-5 h-5" strokeWidth={1.5} />
-            <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-red text-[9px] font-medium flex items-center justify-center text-ink">
-              0
-            </span>
+            {itemCount > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-red text-[9px] font-medium flex items-center justify-center text-white">
+                {itemCount}
+              </span>
+            )}
           </button>
 
           {/* Mobile hamburger */}

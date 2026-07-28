@@ -9,6 +9,9 @@ if (typeof window !== "undefined") {
 }
 
 import { PRODUCTS } from "@/lib/constants";
+import { useCart } from "@/context/CartContext";
+import { useWishlist } from "@/context/WishlistContext";
+import type { CartItem } from "@/context/CartContext";
 
 const allProducts = [...PRODUCTS.mistCollection, ...PRODUCTS.hangingCollection];
 
@@ -20,6 +23,9 @@ function ProductSlide({
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const { addItem } = useCart();
+  const { toggleItem, isWishlisted } = useWishlist();
+  const wishlisted = isWishlisted(product.id);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -75,89 +81,47 @@ function ProductSlide({
         {/* LEFT — Product Image */}
         <div className="product-image flex justify-center lg:justify-end">
           <div className="relative w-full max-w-sm">
-            {/* Bottle */}
-            <div
-              className="relative mx-auto"
-              style={{ width: "200px", height: "320px" }}
-            >
-              {/* Main body */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-sm"
-                style={{
-                  width: "140px",
-                  height: "220px",
-                  background: `linear-gradient(180deg, ${product.accentColor}15 0%, ${product.color} 40%, ${product.color} 100%)`,
-                  border: `1px solid ${product.accentColor}20`,
-                  boxShadow: `0 30px 80px ${product.color}80, 0 0 40px ${product.accentColor}15`,
-                }}
+            <div className="relative mx-auto w-[280px] h-[360px] overflow-hidden border border-white/10">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover"
+              />
+              <button
+                onClick={() =>
+                  toggleItem({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    notes: product.notes,
+                    accentColor: product.accentColor,
+                    description: product.description,
+                  })
+                }
+                className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center rounded-full bg-black/60 text-white/70 hover:text-red hover:bg-black/80 transition-all z-10"
+                aria-label={wishlisted ? "Remove from wishlist" : "Add to wishlist"}
               >
-                {/* Label accent line */}
-                <div
-                  className="absolute top-1/3 left-6 right-6 h-[1px]"
-                  style={{ background: `${product.accentColor}40` }}
-                />
-                {/* Brand */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                  <span
-                    className="text-[8px] tracking-[0.4em] uppercase font-bold block"
-                    style={{ color: product.accentColor }}
-                  >
-                    AutoRoma
-                  </span>
-                  <span
-                    className="text-[6px] tracking-[0.2em] uppercase block mt-1 opacity-50"
-                    style={{ color: product.accentColor }}
-                  >
-                    {product.name}
-                  </span>
-                </div>
-              </div>
-
-              {/* Neck */}
-              <div
-                className="absolute left-1/2 -translate-x-1/2 rounded-t-sm"
-                style={{
-                  width: "30px",
-                  height: "50px",
-                  bottom: "220px",
-                  background: product.accentColor,
-                  boxShadow: `0 -5px 20px ${product.accentColor}40`,
-                }}
-              />
-
-              {/* Cap */}
-              <div
-                className="absolute left-1/2 -translate-x-1/2"
-                style={{
-                  width: "40px",
-                  height: "30px",
-                  bottom: "270px",
-                  background: `linear-gradient(180deg, ${product.accentColor}, ${product.accentColor}cc)`,
-                  borderRadius: "2px 2px 0 0",
-                }}
-              />
-
-              {/* Ambient glow */}
-              <div
-                className="absolute -inset-16 -z-10 rounded-full"
-                style={{
-                  background: `radial-gradient(circle, ${product.accentColor}12, transparent 70%)`,
-                }}
-              />
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill={wishlisted ? "#f21d2f" : "none"}
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </button>
             </div>
 
-            {/* Price tag floating */}
             <div
-              className="absolute -right-2 bottom-16 px-4 py-2 text-center"
-              style={{
-                background: "#050608",
-                border: `1px solid ${product.accentColor}30`,
-              }}
+              className="absolute -right-4 bottom-12 px-5 py-3 text-center"
+              style={{ background: "#050608", border: "1px solid rgba(255,255,255,0.15)" }}
             >
-              <span className="block text-xl font-semibold text-white font-inter">
-                ₹{product.price}
+              <span className="block text-2xl font-semibold text-white font-sans">
+                Rs. {product.price}
               </span>
-              <span className="block text-[8px] tracking-[0.2em] uppercase text-white/30 font-inter">
+              <span className="block text-[9px] tracking-[0.2em] uppercase text-white/30 font-sans">
                 MRP Inclusive
               </span>
             </div>
@@ -198,17 +162,25 @@ function ProductSlide({
             ))}
           </div>
 
-          {/* CTA */}
+            {/* CTA */}
           <div className="flex items-center gap-5 pt-4">
             <button
-              className="px-8 py-3.5 text-[11px] uppercase tracking-[0.2em] font-bold font-inter text-black transition-all duration-300 hover:shadow-[0_0_30px_rgba(242, 29, 47,0.25)]"
-              style={{
-                background: `linear-gradient(135deg, ${product.accentColor}, ${product.accentColor}cc)`,
-              }}
+              onClick={() =>
+                addItem({
+                  id: product.id,
+                  name: product.name,
+                  price: product.price,
+                  image: product.image,
+                  notes: product.notes,
+                  accentColor: product.accentColor,
+                  description: product.description,
+                })
+              }
+              className="px-10 py-4 text-[1.2rem] uppercase tracking-[0.2em] font-bold font-sans text-white transition-all duration-300 bg-red hover:bg-red-dark"
             >
               Add to Bag
             </button>
-            <button className="px-8 py-3.5 text-[11px] uppercase tracking-[0.2em] font-bold font-inter text-white/60 border border-white/10 hover:border-white/30 hover:text-white transition-all duration-300">
+            <button className="px-10 py-4 text-[1.2rem] uppercase tracking-[0.2em] font-bold font-sans text-white/60 border border-white/20 hover:border-white/50 hover:text-white transition-all duration-300">
               Details
             </button>
           </div>

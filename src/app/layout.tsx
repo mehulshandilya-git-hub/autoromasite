@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+import { WishlistProvider } from "@/context/WishlistContext";
+import CartDrawer from "@/components/ui/CartDrawer";
+import WishlistDrawer from "@/components/ui/WishlistDrawer";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -48,7 +52,13 @@ export default function RootLayout({
       className={`${montserrat.variable} ${poppins.variable}`}
     >
       <body className="min-h-screen bg-background text-foreground antialiased">
-        {children}
+        <CartProvider>
+          <WishlistProvider>
+            {children}
+            <CartDrawer />
+            <WishlistDrawer />
+          </WishlistProvider>
+        </CartProvider>
       </body>
     </html>
   );
