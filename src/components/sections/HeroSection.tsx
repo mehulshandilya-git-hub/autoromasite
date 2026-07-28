@@ -30,8 +30,16 @@ export default function HeroSection() {
       ref={ref}
       className="relative flex items-center justify-center min-h-screen overflow-hidden"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/images/bg2.gif)" }} />
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/bg.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
 
       {/* Decorative gold gradient */}
