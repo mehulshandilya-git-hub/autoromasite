@@ -5,24 +5,16 @@ import IntroLoader from "@/components/ui/IntroLoader";
 import CustomCursor from "@/components/ui/CustomCursor";
 import Navbar from "@/components/ui/Navbar";
 import SmoothScroll from "@/components/ui/SmoothScroll";
-import ZoomJourney from "@/components/ui/ZoomJourney";
-import CollectionSlide from "@/components/sections/CollectionSlide";
+import AnnouncementBar from "@/components/sections/AnnouncementBar";
+import HeroSection from "@/components/sections/HeroSection";
+import TrustStrip from "@/components/sections/TrustStrip";
+import FeaturedProducts from "@/components/sections/FeaturedProducts";
+import BrandStory from "@/components/sections/BrandStory";
+import ShopByDesign from "@/components/sections/ShopByDesign";
+import ShopByFragrance from "@/components/sections/ShopByFragrance";
+import MirroredBanners from "@/components/sections/MirroredBanners";
 import Footer from "@/components/sections/Footer";
-
-import HeroSlide from "@/components/sections/HeroSlide";
-import WhySlide from "@/components/sections/WhySlide";
-import StorySlide from "@/components/sections/StorySlide";
-import CtaSlide from "@/components/sections/CtaSlide";
-
-const introSlides = [
-  { id: "hero", content: <HeroSlide />, bg: "dark" as const },
-  { id: "why", content: <WhySlide />, bg: "dark" as const },
-];
-
-const outroSlides = [
-  { id: "story", content: <StorySlide />, bg: "dark" as const },
-  { id: "cta", content: <CtaSlide />, bg: "dark" as const },
-];
+import CollectionSlide from "@/components/sections/CollectionSlide";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,21 +30,19 @@ export default function Home() {
 
       {!isLoading && (
         <SmoothScroll>
-          <main className="bg-ink">
+          <main className="bg-background">
+            <AnnouncementBar />
             <Navbar />
-
-            {/* Hero + Why — zoom journey intro */}
-            <ZoomJourney slides={introSlides} />
-
-            {/* Collection — each product is one full screen */}
-            <div id="collection">
+            <HeroSection />
+            <TrustStrip />
+            <FeaturedProducts />
+            <BrandStory />
+            <MirroredBanners />
+            <ShopByDesign />
+            <section className="border-t border-white/5">
               <CollectionSlide />
-            </div>
-
-            {/* Story + CTA — zoom journey outro */}
-            <ZoomJourney slides={outroSlides} />
-
-            {/* Footer */}
+            </section>
+            <ShopByFragrance />
             <Footer />
           </main>
         </SmoothScroll>
