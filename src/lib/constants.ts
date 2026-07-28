@@ -8,7 +8,7 @@ export const PRODUCTS = {
       color: "#8B5E3C",
       accentColor: "#F21D2F",
       notes: ["Oud", "Amber", "Sandalwood"],
-      image: "/images/p1.jpeg",
+      image: "/images/im.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -19,7 +19,7 @@ export const PRODUCTS = {
       color: "#2C1810",
       accentColor: "#8B7355",
       notes: ["Leather", "Cedar", "Musk"],
-      image: "/images/p2.jpeg",
+      image: "/images/rb.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -30,7 +30,7 @@ export const PRODUCTS = {
       color: "#4A1942",
       accentColor: "#C9A0DC",
       notes: ["Rose", "Peony", "Iris"],
-      image: "/images/p3.jpeg",
+      image: "/images/vv.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -64,7 +64,7 @@ export const PRODUCTS = {
       color: "#0A2818",
       accentColor: "#27AE60",
       notes: ["Basil", "Eucalyptus", "Moss"],
-      image: "/images/p6.jpeg",
+      image: "/images/gm.jpeg",
     },
     {
       id: "earth-realm",
@@ -84,7 +84,7 @@ export const PRODUCTS = {
       color: "#2E0A1A",
       accentColor: "#E74C3C",
       notes: ["Passion Fruit", "Coconut", "Spice"],
-      image: "/images/p8.jpeg",
+      image: "/images/pt.jpeg",
     },
   ],
 };
