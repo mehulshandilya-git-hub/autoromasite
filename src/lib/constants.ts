@@ -8,7 +8,7 @@ export const PRODUCTS = {
       color: "#8B5E3C",
       accentColor: "#F21D2F",
       notes: ["Oud", "Amber", "Sandalwood"],
-      image: "/images/imperial-mist.png",
+      image: "/images/p1.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -19,7 +19,7 @@ export const PRODUCTS = {
       color: "#2C1810",
       accentColor: "#8B7355",
       notes: ["Leather", "Cedar", "Musk"],
-      image: "/images/regal-blend.png",
+      image: "/images/p2.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -30,7 +30,7 @@ export const PRODUCTS = {
       color: "#4A1942",
       accentColor: "#C9A0DC",
       notes: ["Rose", "Peony", "Iris"],
-      image: "/images/vogue-vallet.png",
+      image: "/images/p3.jpeg",
       model: "/models/bottle.glb",
     },
     {
@@ -41,7 +41,7 @@ export const PRODUCTS = {
       color: "#1A0A2E",
       accentColor: "#9B59B6",
       notes: ["Vanilla", "Jasmine", "Musk"],
-      image: "/images/mosidh-seduction.png",
+      image: "/images/p4.jpeg",
       model: "/models/bottle.glb",
     },
   ],
@@ -54,7 +54,7 @@ export const PRODUCTS = {
       color: "#0A1628",
       accentColor: "#3498DB",
       notes: ["Ocean", "Mint", "Cedar"],
-      image: "/images/new-ride-luxe.png",
+      image: "/images/p5.jpeg",
     },
     {
       id: "green-muse",
@@ -64,7 +64,7 @@ export const PRODUCTS = {
       color: "#0A2818",
       accentColor: "#27AE60",
       notes: ["Basil", "Eucalyptus", "Moss"],
-      image: "/images/green-muse.png",
+      image: "/images/p6.jpeg",
     },
     {
       id: "earth-realm",
@@ -74,7 +74,7 @@ export const PRODUCTS = {
       color: "#2C1A0E",
       accentColor: "#8D6E4C",
       notes: ["Vetiver", "Patchouli", "Oak"],
-      image: "/images/earth-realm.png",
+      image: "/images/p7.jpeg",
     },
     {
       id: "passion-tropic",
@@ -84,7 +84,7 @@ export const PRODUCTS = {
       color: "#2E0A1A",
       accentColor: "#E74C3C",
       notes: ["Passion Fruit", "Coconut", "Spice"],
-      image: "/images/passion-tropic.png",
+      image: "/images/p8.jpeg",
     },
   ],
 };

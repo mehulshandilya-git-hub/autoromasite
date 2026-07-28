@@ -16,28 +16,14 @@ function ProductCard({ product, index }: { product: (typeof allProducts)[0]; ind
   return (
     <div className="product-card group relative flex flex-col">
       {/* Image area */}
-      <div className="relative aspect-[3/4] overflow-hidden bg-ink-light border border-white/5">
-        <div
-          className="absolute inset-0 flex items-center justify-center transition-transform duration-600 group-hover:scale-105"
-          style={{
-            background: `linear-gradient(180deg, ${product.color}20 0%, ${product.color}10 100%)`,
-          }}
-        >
-          {/* Stylized bottle representation */}
-          <div className="relative">
-            <div
-              className="w-20 h-32 md:w-24 md:h-36 rounded-sm opacity-80"
-              style={{
-                background: `linear-gradient(180deg, ${product.accentColor}30, ${product.color}80)`,
-                border: `1px solid ${product.accentColor}30`,
-              }}
-            >
-              <div className="absolute top-1/3 left-4 right-4 h-[1px]" style={{ background: `${product.accentColor}40` }} />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <span className="text-[6px] tracking-[0.3em] uppercase block" style={{ color: product.accentColor }}>AutoRoma</span>
-              </div>
-            </div>
-          </div>
+      <div className="relative aspect-[3/4] overflow-hidden bg-ink-soft border border-white/5">
+        <div className="absolute inset-0 transition-transform duration-600 group-hover:scale-105">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </div>
 
         {/* Wishlist button */}
