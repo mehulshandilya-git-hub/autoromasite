@@ -54,7 +54,7 @@ export default function TrustStrip() {
               key={item.label}
               className="trust-item flex flex-col items-center text-center gap-3"
             >
-              <item.icon className="w-6 h-6 text-gold" strokeWidth={1.5} />
+              <item.icon className="w-6 h-6 text-red" strokeWidth={1.5} />
               <span className="text-[1.2rem] font-sans font-medium text-white/80 uppercase tracking-[0.08em]">
                 {item.label}
               </span>

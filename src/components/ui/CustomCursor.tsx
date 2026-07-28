@@ -71,7 +71,7 @@ export default function CustomCursor() {
               top: point.y - 3,
               width: 6,
               height: 6,
-              background: "radial-gradient(circle, rgba(201,169,110,0.6), transparent)",
+              background: "radial-gradient(circle, rgba(242, 29, 47,0.6), transparent)",
             }}
           />
         ))}
@@ -89,10 +89,10 @@ export default function CustomCursor() {
         }}
         transition={{ type: "tween", duration: 0.15, ease: "easeOut" }}
         style={{
-          border: "1px solid rgba(201, 169, 110, 0.5)",
+          border: "1px solid rgba(242, 29, 47, 0.5)",
           boxShadow: isHovering
-            ? "0 0 30px rgba(201, 169, 110, 0.4), 0 0 60px rgba(201, 169, 110, 0.1)"
-            : "0 0 15px rgba(201, 169, 110, 0.2)",
+            ? "0 0 30px rgba(242, 29, 47, 0.4), 0 0 60px rgba(242, 29, 47, 0.1)"
+            : "0 0 15px rgba(242, 29, 47, 0.2)",
         }}
       />
 
@@ -108,8 +108,8 @@ export default function CustomCursor() {
         style={{
           width: 8,
           height: 8,
-          background: "radial-gradient(circle, #c9a96e, #8a6f3a)",
-          boxShadow: "0 0 10px rgba(201, 169, 110, 0.6)",
+          background: "radial-gradient(circle, #f21d2f, #a80f1d)",
+          boxShadow: "0 0 10px rgba(242, 29, 47, 0.6)",
         }}
       />
     </div>

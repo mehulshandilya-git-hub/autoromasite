@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0a0a0a;
-  --color-foreground: #f9f9f9;
-  --color-gold: #c9a96e;
-  --color-gold-light: #e8d5a3;
-  --color-gold-dark: #a8884d;
-  --color-ink: #0a0a0a;
-  --color-ink-soft: #1c1c1e;
-  --color-ink-mute: rgba(249, 249, 249, 0.6);
-  --color-paper: #f9f9f9;
-  --color-stone: #e8e4de;
-  --color-stone-dark: #d4d0ca;
+  --color-background: #050608;
+  --color-foreground: #d9d9d9;
+  --color-red: #f21d2f;
+  --color-red-light: #ff3d4d;
+  --color-red-dark: #a80f1d;
+  --color-ink: #050608;
+  --color-ink-soft: #0b0d0f;
+  --color-ink-mute: #8a8f94;
+  --color-paper: #ffffff;
+  --color-border: #25282b;
 
   --font-display: "Montserrat", sans-serif;
   --font-sans: "Poppins", sans-serif;
@@ -64,13 +63,13 @@
 
 html {
   scroll-behavior: auto;
-  background: #0a0a0a;
+  background: #050608;
   font-size: 62.5%;
 }
 
 body {
-  background: #0a0a0a;
-  color: #f9f9f9;
+  background: #050608;
+  color: #d9d9d9;
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.5rem;
   line-height: var(--ar-leading-body);
@@ -80,8 +79,8 @@ body {
 }
 
 ::selection {
-  background: rgba(201, 169, 110, 0.4);
-  color: #f9f9f9;
+  background: rgba(242, 29, 47, 0.4);
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -89,11 +88,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #050608;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #c9a96e, #a8884d);
+  background: linear-gradient(180deg, #f21d2f, #a80f1d);
   border-radius: 4px;
 }
 
@@ -107,16 +106,13 @@ a {
   text-decoration: none;
 }
 
-/* ============================
-   SECTION HEADER PATTERN
-   ============================ */
 .section-overline {
   font-family: var(--font-sans);
   font-size: var(--ar-fs-eyebrow);
   font-weight: 500;
   letter-spacing: var(--ar-tracking-eyebrow);
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-red);
   margin-bottom: var(--ar-space-2);
 }
 
@@ -127,7 +123,7 @@ a {
   letter-spacing: var(--ar-tracking-heading);
   line-height: var(--ar-leading-heading);
   margin-bottom: var(--ar-space-4);
-  color: #f9f9f9;
+  color: #ffffff;
 }
 
 .section-subheading {
@@ -140,9 +136,6 @@ a {
   line-height: var(--ar-leading-body);
 }
 
-/* ============================
-   BUTTONS
-   ============================ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -153,9 +146,9 @@ a {
   font-weight: 500;
   letter-spacing: var(--ar-tracking-button);
   text-transform: uppercase;
-  color: #0a0a0a;
-  background: #c9a96e;
-  border: 1px solid #c9a96e;
+  color: #ffffff;
+  background: #f21d2f;
+  border: 1px solid #f21d2f;
   border-radius: 0;
   cursor: pointer;
   transition: background var(--ar-dur-base) var(--ar-ease),
@@ -163,8 +156,8 @@ a {
 }
 
 .btn-primary:hover {
-  background: #e8d5a3;
-  border-color: #e8d5a3;
+  background: #a80f1d;
+  border-color: #a80f1d;
 }
 
 .btn-secondary {
@@ -177,9 +170,9 @@ a {
   font-weight: 500;
   letter-spacing: var(--ar-tracking-button);
   text-transform: uppercase;
-  color: #f9f9f9;
+  color: #ffffff;
   background: transparent;
-  border: 1px solid rgba(249, 249, 249, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 0;
   cursor: pointer;
   transition: border-color var(--ar-dur-base) var(--ar-ease),
@@ -187,13 +180,10 @@ a {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(249, 249, 249, 0.6);
-  background: rgba(249, 249, 249, 0.05);
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* ============================
-   GLASSMORPHISM
-   ============================ */
 .glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
@@ -201,16 +191,13 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.glass-gold {
-  background: rgba(201, 169, 110, 0.05);
+.glass-red {
+  background: rgba(242, 29, 47, 0.05);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(201, 169, 110, 0.15);
+  border: 1px solid rgba(242, 29, 47, 0.15);
 }
 
-/* ============================
-   SCROLL INDICATOR
-   ============================ */
 .scroll-indicator {
   animation: scroll-bounce 2s ease-in-out infinite;
 }
@@ -220,12 +207,9 @@ a {
   50% { transform: translateY(6px); }
 }
 
-/* ============================
-   UTILITY ANIMATIONS
-   ============================ */
-@keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 110, 0.2); }
-  50% { box-shadow: 0 0 40px rgba(201, 169, 110, 0.4), 0 0 80px rgba(201, 169, 110, 0.1); }
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 20px rgba(242, 29, 47, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(242, 29, 47, 0.4), 0 0 80px rgba(242, 29, 47, 0.1); }
 }
 
 @keyframes shimmer {

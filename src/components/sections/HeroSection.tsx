@@ -36,7 +36,7 @@ export default function HeroSection() {
 
       {/* Decorative gold gradient */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[60vw] h-[40vh] opacity-20" style={{
-        background: "radial-gradient(ellipse, rgba(201,169,110,0.2), transparent 70%)",
+        background: "radial-gradient(ellipse, rgba(242, 29, 47,0.2), transparent 70%)",
         pointerEvents: "none",
       }} />
 
@@ -48,7 +48,7 @@ export default function HeroSection() {
         >
           Fresh Air.
           <br />
-          <span className="text-gold">Natural Comfort.</span>
+          <span className="text-red">Natural Comfort.</span>
         </h1>
         <p className="text-[1.5rem] md:text-[1.7rem] text-white/60 font-sans font-light max-w-[62ch] mx-auto mb-10 leading-relaxed">
           Transform every drive into a sensory journey with AutoRoma premium
@@ -69,7 +69,7 @@ export default function HeroSection() {
         <span className="text-[1rem] tracking-[0.15em] uppercase font-sans font-medium">
           Scroll
         </span>
-        <div className="scroll-indicator w-[1px] h-8 bg-gradient-to-b from-gold/60 to-transparent" />
+        <div className="scroll-indicator w-[1px] h-8 bg-gradient-to-b from-red/60 to-transparent" />
       </div>
     </section>
   );

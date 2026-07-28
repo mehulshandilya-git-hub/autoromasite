@@ -150,7 +150,7 @@ function ProductSlide({
             <div
               className="absolute -right-2 bottom-16 px-4 py-2 text-center"
               style={{
-                background: "#0a0a0a",
+                background: "#050608",
                 border: `1px solid ${product.accentColor}30`,
               }}
             >
@@ -167,12 +167,12 @@ function ProductSlide({
         {/* RIGHT — Product Info */}
         <div className="product-info space-y-6">
           {/* Number */}
-          <span className="text-[10px] tracking-[0.3em] uppercase text-gold/60 font-inter font-bold">
+          <span className="text-[10px] tracking-[0.3em] uppercase text-red/60 font-inter font-bold">
             {String(index + 1).padStart(2, "0")} / {String(allProducts.length).padStart(2, "0")}
           </span>
 
           {/* Name */}
-          <h2 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-[1.1]">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-light text-white leading-[1.1]">
             {product.name}
           </h2>
 
@@ -201,7 +201,7 @@ function ProductSlide({
           {/* CTA */}
           <div className="flex items-center gap-5 pt-4">
             <button
-              className="px-8 py-3.5 text-[11px] uppercase tracking-[0.2em] font-bold font-inter text-black transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,169,110,0.25)]"
+              className="px-8 py-3.5 text-[11px] uppercase tracking-[0.2em] font-bold font-inter text-black transition-all duration-300 hover:shadow-[0_0_30px_rgba(242, 29, 47,0.25)]"
               style={{
                 background: `linear-gradient(135deg, ${product.accentColor}, ${product.accentColor}cc)`,
               }}
@@ -248,10 +248,10 @@ export default function CollectionSlide() {
     <div ref={containerRef}>
       {/* Section header */}
       <div className="collection-header text-center pt-20 pb-10 px-6 opacity-0">
-        <span className="text-[10px] sm:text-xs font-inter font-bold uppercase tracking-[0.25em] text-gold block">
+        <span className="text-[10px] sm:text-xs font-inter font-bold uppercase tracking-[0.25em] text-red block">
           Our Collection
         </span>
-        <h2 className="mt-3 font-cormorant text-3xl sm:text-4xl lg:text-5xl font-light text-white">
+        <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-light text-white">
           Crafted for Every Journey
         </h2>
       </div>

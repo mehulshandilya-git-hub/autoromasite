@@ -10,11 +10,11 @@ if (typeof window !== "undefined") {
 }
 
 const designs = [
-  { name: "Mars Boy", color: "#C9A96E", id: "mars-boy" },
+  { name: "Mars Boy", color: "#f21d2f", id: "mars-boy" },
   { name: "Happy Dog", color: "#8B5E3C", id: "happy-dog" },
   { name: "Feather", color: "#D4A43A", id: "feather" },
   { name: "Starfish", color: "#C9A0DC", id: "starfish" },
-  { name: "Shell Baby", color: "#E8D5A3", id: "shell-baby" },
+  { name: "Shell Baby", color: "#ff3d4d", id: "shell-baby" },
 ];
 
 export default function ShopByDesign() {
@@ -64,7 +64,7 @@ export default function ShopByDesign() {
               href="#featured"
               className="sbd-card group flex flex-col items-center text-center gap-4 cursor-pointer"
             >
-              <div className="relative w-full aspect-square rounded-full overflow-hidden border-2 border-white/10 group-hover:border-gold/40 transition-all duration-300 group-hover:shadow-[0_0_40px_rgba(201,169,110,0.15)] group-hover:-translate-y-1">
+              <div className="relative w-full aspect-square rounded-full overflow-hidden border-2 border-white/10 group-hover:border-red/40 transition-all duration-300 group-hover:shadow-[0_0_40px_rgba(242, 29, 47,0.15)] group-hover:-translate-y-1">
                 <div
                   className="w-full h-full flex items-center justify-center transition-transform duration-600 group-hover:scale-105"
                   style={{
@@ -76,14 +76,14 @@ export default function ShopByDesign() {
                     border: `2px solid ${design.color}30`,
                   }}>
                     <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-[8px] tracking-[0.3em] uppercase text-gold/50 font-sans font-medium">
+                      <span className="text-[8px] tracking-[0.3em] uppercase text-red/50 font-sans font-medium">
                         {design.name.charAt(0)}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <span className="text-[1.4rem] font-sans font-medium text-white/80 group-hover:text-gold transition-colors">
+              <span className="text-[1.4rem] font-sans font-medium text-white/80 group-hover:text-red transition-colors">
                 {design.name}
               </span>
             </a>

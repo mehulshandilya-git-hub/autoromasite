@@ -14,7 +14,7 @@ const families = [
   { name: "Fresh", tagline: "Clean & calming", icon: FiWind, color: "#6FCF97" },
   { name: "Woody", tagline: "Warm & grounded", icon: FiCoffee, color: "#8B5E3C" },
   { name: "Citrus", tagline: "Bright & zesty", icon: FiSun, color: "#F2C94C" },
-  { name: "Sweet", tagline: "Rich & indulgent", icon: FiDroplet, color: "#E8D5A3" },
+  { name: "Sweet", tagline: "Rich & indulgent", icon: FiDroplet, color: "#ff3d4d" },
 ];
 
 export default function ShopByFragrance() {
@@ -61,7 +61,7 @@ export default function ShopByFragrance() {
             <a
               key={family.name}
               href="#featured"
-              className="frag-card group relative flex flex-col items-center text-center p-8 border border-white/10 hover:border-gold/30 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
+              className="frag-card group relative flex flex-col items-center text-center p-8 border border-white/10 hover:border-red/30 transition-all duration-250 hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
             >
               {/* Icon */}
               <div className="mb-5 transition-transform duration-250 group-hover:scale-110" style={{ color: family.color }}>
@@ -79,13 +79,13 @@ export default function ShopByFragrance() {
               </p>
 
               {/* CTA underline */}
-              <span className="inline-flex items-center gap-1 text-[1.2rem] font-sans font-medium text-gold/60 group-hover:text-gold transition-colors">
+              <span className="inline-flex items-center gap-1 text-[1.2rem] font-sans font-medium text-red/60 group-hover:text-red transition-colors">
                 Shop
                 <span className="inline-block transition-transform duration-250 group-hover:translate-x-1">→</span>
               </span>
 
               {/* Hover underline */}
-              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-450 origin-left" />
+              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-red scale-x-0 group-hover:scale-x-100 transition-transform duration-450 origin-left" />
             </a>
           ))}
         </div>

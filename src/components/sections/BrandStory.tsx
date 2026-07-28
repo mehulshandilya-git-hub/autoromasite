@@ -57,23 +57,23 @@ export default function BrandStory() {
               <div
                 className="w-full h-full flex items-center justify-center"
                 style={{
-                  background: "linear-gradient(135deg, rgba(201,169,110,0.08), rgba(10,10,10,1) 60%)",
+                  background: "linear-gradient(135deg, rgba(242, 29, 47,0.08), rgba(10,10,10,1) 60%)",
                 }}
               >
                 {/* Stylized product display */}
                 <div className="relative">
                   <div className="w-40 h-56 md:w-48 md:h-64 rounded-sm" style={{
-                    background: "linear-gradient(180deg, rgba(201,169,110,0.2), rgba(139,94,60,0.6))",
-                    border: "1px solid rgba(201,169,110,0.2)",
+                    background: "linear-gradient(180deg, rgba(242, 29, 47,0.2), rgba(139,94,60,0.6))",
+                    border: "1px solid rgba(242, 29, 47,0.2)",
                   }}>
-                    <div className="absolute top-1/3 left-6 right-6 h-[1px]" style={{ background: "rgba(201,169,110,0.3)" }} />
+                    <div className="absolute top-1/3 left-6 right-6 h-[1px]" style={{ background: "rgba(242, 29, 47,0.3)" }} />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                      <span className="text-[8px] tracking-[0.4em] uppercase block text-gold/60">AutoRoma</span>
+                      <span className="text-[8px] tracking-[0.4em] uppercase block text-red/60">AutoRoma</span>
                     </div>
                   </div>
                   {/* Ambient glow */}
                   <div className="absolute -inset-10 -z-10 rounded-full" style={{
-                    background: "radial-gradient(circle, rgba(201,169,110,0.08), transparent 70%)",
+                    background: "radial-gradient(circle, rgba(242, 29, 47,0.08), transparent 70%)",
                   }} />
                 </div>
               </div>

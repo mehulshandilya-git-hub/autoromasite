@@ -47,8 +47,8 @@ export default function IntroLoader({ onComplete }: LoaderProps) {
       p.style.height = `${size}px`;
       p.style.left = `${Math.random() * 100}%`;
       p.style.top = `${Math.random() * 100}%`;
-      p.style.background = `radial-gradient(circle, rgba(201,169,110,${Math.random() * 0.6 + 0.2}), transparent)`;
-      p.style.boxShadow = `0 0 ${size * 3}px rgba(201,169,110,0.3)`;
+      p.style.background = `radial-gradient(circle, rgba(242, 29, 47,${Math.random() * 0.6 + 0.2}), transparent)`;
+      p.style.boxShadow = `0 0 ${size * 3}px rgba(242, 29, 47,0.3)`;
       particlesRef.current.appendChild(p);
       particles.push(p);
 
@@ -79,7 +79,7 @@ export default function IntroLoader({ onComplete }: LoaderProps) {
           className="absolute inset-0 opacity-20"
           style={{
             background:
-              "radial-gradient(ellipse 600px 400px at 50% 50%, rgba(201,169,110,0.15), transparent)",
+              "radial-gradient(ellipse 600px 400px at 50% 50%, rgba(242, 29, 47,0.15), transparent)",
           }}
         />
 
@@ -99,7 +99,7 @@ export default function IntroLoader({ onComplete }: LoaderProps) {
               className="text-6xl md:text-8xl font-light tracking-[0.3em] uppercase"
               style={{ fontFamily: "var(--font-geist-sans)" }}
             >
-              <span className="gold-gradient">Auto</span>
+              <span className="red-gradient">Auto</span>
               <span className="text-white">Roma</span>
             </h1>
             <motion.div
@@ -108,7 +108,7 @@ export default function IntroLoader({ onComplete }: LoaderProps) {
               transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="mt-4 h-[1px] mx-auto origin-center"
               style={{
-                background: "linear-gradient(90deg, transparent, #c9a96e, transparent)",
+                background: "linear-gradient(90deg, transparent, #f21d2f, transparent)",
                 width: "80%",
               }}
             />
@@ -134,7 +134,7 @@ export default function IntroLoader({ onComplete }: LoaderProps) {
         <div
           className="absolute bottom-0 left-0 right-0 h-32"
           style={{
-            background: "linear-gradient(to top, rgba(201,169,110,0.03), transparent)",
+            background: "linear-gradient(to top, rgba(242, 29, 47,0.03), transparent)",
           }}
         />
       </motion.div>

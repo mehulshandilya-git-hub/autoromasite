@@ -36,7 +36,7 @@ export default function Navbar() {
             className="text-xl md:text-2xl tracking-[0.2em] uppercase"
             style={{ fontFamily: "var(--font-montserrat)", fontWeight: 300 }}
           >
-            <span className="text-gold" style={{ fontWeight: 400 }}>Auto</span>
+            <span className="text-red" style={{ fontWeight: 400 }}>Auto</span>
             <span className="text-white">Roma</span>
           </span>
         </a>
@@ -64,7 +64,7 @@ export default function Navbar() {
           </button>
           <button className="text-white/70 hover:text-white transition-colors relative" aria-label="Cart">
             <FiShoppingBag className="w-5 h-5" strokeWidth={1.5} />
-            <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-gold text-[9px] font-medium flex items-center justify-center text-ink">
+            <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-red text-[9px] font-medium flex items-center justify-center text-ink">
               0
             </span>
           </button>

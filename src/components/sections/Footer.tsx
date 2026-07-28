@@ -36,7 +36,7 @@ export default function Footer() {
                 className="text-2xl tracking-[0.2em] uppercase"
                 style={{ fontFamily: "var(--font-montserrat)", fontWeight: 300 }}
               >
-                <span className="text-gold" style={{ fontWeight: 400 }}>Auto</span>
+                <span className="text-red" style={{ fontWeight: 400 }}>Auto</span>
                 <span className="text-white">Roma</span>
               </span>
             </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                 <a
                   key={social.href}
                   href={social.href}
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white/50 hover:bg-gold hover:text-ink transition-all duration-250 hover:-translate-y-0.5"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white/50 hover:bg-red hover:text-ink transition-all duration-250 hover:-translate-y-0.5"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -68,17 +68,17 @@ export default function Footer() {
 
           {/* Get In Touch */}
           <div>
-            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-gold/70 mb-5">
+            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-red/70 mb-5">
               Get In Touch
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+919072555565" className="text-[1.3rem] text-white/50 hover:text-gold/70 transition-colors font-sans font-light">
+                <a href="tel:+919072555565" className="text-[1.3rem] text-white/50 hover:text-red/70 transition-colors font-sans font-light">
                   +91 90725 55565
                 </a>
               </li>
               <li>
-                <a href="mailto:info@autoroma.in" className="text-[1.3rem] text-white/50 hover:text-gold/70 transition-colors font-sans font-light">
+                <a href="mailto:info@autoroma.in" className="text-[1.3rem] text-white/50 hover:text-red/70 transition-colors font-sans font-light">
                   info@autoroma.in
                 </a>
               </li>
@@ -87,13 +87,13 @@ export default function Footer() {
 
           {/* Main Menu */}
           <div>
-            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-gold/70 mb-5">
+            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-red/70 mb-5">
               Main Menu
             </h3>
             <ul className="space-y-3">
               {footerLinks.mainMenu.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-gold/70 transition-colors font-sans font-light">
+                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-red/70 transition-colors font-sans font-light">
                     {link.label}
                   </a>
                 </li>
@@ -103,13 +103,13 @@ export default function Footer() {
 
           {/* Policies */}
           <div>
-            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-gold/70 mb-5">
+            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-red/70 mb-5">
               Links
             </h3>
             <ul className="space-y-3">
               {footerLinks.policies.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-gold/70 transition-colors font-sans font-light">
+                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-red/70 transition-colors font-sans font-light">
                     {link.label}
                   </a>
                 </li>
@@ -119,13 +119,13 @@ export default function Footer() {
 
           {/* My Account */}
           <div>
-            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-gold/70 mb-5">
+            <h3 className="text-[1.2rem] font-sans font-medium uppercase tracking-[0.18em] text-red/70 mb-5">
               My Account
             </h3>
             <ul className="space-y-3">
               {footerLinks.account.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-gold/70 transition-colors font-sans font-light">
+                  <a href={link.href} className="text-[1.3rem] text-white/50 hover:text-red/70 transition-colors font-sans font-light">
                     {link.label}
                   </a>
                 </li>
@@ -144,9 +144,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 md:w-72 px-5 py-3 bg-white/5 border border-white/10 text-white text-[1.3rem] font-sans placeholder-white/30 outline-none focus:border-gold/50 transition-colors"
+                className="flex-1 md:w-72 px-5 py-3 bg-white/5 border border-white/10 text-white text-[1.3rem] font-sans placeholder-white/30 outline-none focus:border-red/50 transition-colors"
               />
-              <button className="px-6 py-3 bg-gold text-ink flex items-center justify-center hover:bg-gold-light transition-colors">
+              <button className="px-6 py-3 bg-red text-ink flex items-center justify-center hover:bg-red-light transition-colors">
                 <FiSend className="w-4 h-4" strokeWidth={1.5} />
               </button>
             </div>

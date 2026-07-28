@@ -70,21 +70,21 @@ function BannerRow({
         }`}
       >
         <div className="absolute inset-0 flex items-center justify-center" style={{
-          background: `linear-gradient(135deg, rgba(201,169,110,0.06), rgba(10,10,10,1) 60%)`,
+          background: `linear-gradient(135deg, rgba(242, 29, 47,0.06), rgba(10,10,10,1) 60%)`,
         }}>
           <div className="relative">
             <div className="w-32 h-40 md:w-40 md:h-52 rounded-sm" style={{
-              background: `linear-gradient(180deg, rgba(201,169,110,0.15), rgba(139,94,60,0.5))`,
-              border: "1px solid rgba(201,169,110,0.15)",
+              background: `linear-gradient(180deg, rgba(242, 29, 47,0.15), rgba(139,94,60,0.5))`,
+              border: "1px solid rgba(242, 29, 47,0.15)",
             }}>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-[10px] tracking-[0.4em] uppercase text-gold/40 font-sans font-medium">
+                <span className="text-[10px] tracking-[0.4em] uppercase text-red/40 font-sans font-medium">
                   {index === 0 ? "Car" : "Home"}
                 </span>
               </div>
             </div>
             <div className="absolute -inset-8 -z-10 rounded-full" style={{
-              background: `radial-gradient(circle, rgba(201,169,110,0.06), transparent 70%)`,
+              background: `radial-gradient(circle, rgba(242, 29, 47,0.06), transparent 70%)`,
             }} />
           </div>
         </div>

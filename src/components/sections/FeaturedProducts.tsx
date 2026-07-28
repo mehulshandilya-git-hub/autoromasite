@@ -42,21 +42,21 @@ function ProductCard({ product, index }: { product: (typeof allProducts)[0]; ind
 
         {/* Wishlist button */}
         <button
-          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 text-white/60 hover:text-gold hover:bg-black/60 transition-all z-10"
+          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 text-white/60 hover:text-red hover:bg-black/60 transition-all z-10"
           aria-label="Add to wishlist"
         >
           <FiHeart className="w-4 h-4" strokeWidth={1.5} />
         </button>
 
         {/* Badge */}
-        <div className="absolute top-3 left-3 bg-gold text-ink text-[9px] font-sans font-semibold uppercase tracking-[0.1em] px-2.5 py-1">
+        <div className="absolute top-3 left-3 bg-red text-ink text-[9px] font-sans font-semibold uppercase tracking-[0.1em] px-2.5 py-1">
           {index < 4 ? "Mist" : "Hanging"}
         </div>
       </div>
 
       {/* Info */}
       <div className="flex flex-col pt-4 pb-2">
-        <span className="text-[1.2rem] font-sans font-medium text-gold uppercase tracking-[0.08em]">
+        <span className="text-[1.2rem] font-sans font-medium text-red uppercase tracking-[0.08em]">
           {product.name}
         </span>
         <p className="text-[1.3rem] font-sans text-white/50 mt-0.5 line-clamp-1">
